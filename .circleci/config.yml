@@ -19,6 +19,7 @@ jobs:
           command: |
             docker build -t gamberge:latest .
 
+#je vais te chicoter
 
 # Test Docker image
       - run:
