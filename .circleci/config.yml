@@ -25,3 +25,13 @@ jobs:
           name: Build Docker image
           command: |
             docker build -t gamberge:latest .
+
+
+# Test Docker image
+      - run:
+          name: Test Docker image
+          command: |
+            docker run -d -p 8080:8080 gamberge:latest
+            sleep 10  # Wait for container to start
+            curl -f http://localhost:8080
+
